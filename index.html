@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Student Score Calculator</h1>
+    <p class="hint">Enter each student's CA scores and exam score (0–25 for each CA, 0–25 for the exam). The total is calculated out of 100.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>CA 1</th>
+            <th>CA 2</th>
+            <th>CA 3</th>
+            <th>Exam</th>
+            <th>Total / 100</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody id="studentRows">
+          <tr data-student="1">
+            <td>Student 1</td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 1 CA 1"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 1 CA 2"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 1 CA 3"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 1 Exam"></td>
+            <td class="total">—</td><td class="grade">—</td>
+          </tr>
+          <tr data-student="2">
+            <td>Student 2</td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 2 CA 1"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 2 CA 2"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 2 CA 3"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 2 Exam"></td>
+            <td class="total">—</td><td class="grade">—</td>
+          </tr>
+          <tr data-student="3">
+            <td>Student 3</td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 3 CA 1"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 3 CA 2"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 3 CA 3"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 3 Exam"></td>
+            <td class="total">—</td><td class="grade">—</td>
+          </tr>
+          <tr data-student="4">
+            <td>Student 4</td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 4 CA 1"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 4 CA 2"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 4 CA 3"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 4 Exam"></td>
+            <td class="total">—</td><td class="grade">—</td>
+          </tr>
+          <tr data-student="5">
+            <td>Student 5</td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 5 CA 1"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 5 CA 2"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 5 CA 3"></td>
+            <td><input type="number" class="score" min="0" max="25" step="1" aria-label="Student 5 Exam"></td>
+            <td class="total">—</td><td class="grade">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="actions">
+      <button type="button" id="clearButton" class="secondary">Clear scores</button>
+      <button type="button" id="printButton">Print results</button>
+    </div>
+    <p id="message" role="status" aria-live="polite"></p>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
