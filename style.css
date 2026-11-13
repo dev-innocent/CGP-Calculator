@@ -64,6 +64,7 @@ input:focus {
 }
 .grade {
   font-weight: 700;
+  color: green;
 }
 .actions {
   display: flex;
